@@ -33,6 +33,24 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Kontrolka MenuGlowne.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu MenuGlowne;
+
+        /// <summary>
+        /// Kontrolka SiteMapDataSource.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource;
+
+        /// <summary>
         /// Kontrolka ContentPlaceHolder1.
         /// </summary>
         /// <remarks>

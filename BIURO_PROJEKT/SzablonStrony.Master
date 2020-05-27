@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Biuro Wyceny Nieruchomosci</title>
     <script src="scripts/main-scrits.js"></script>
     <link href="styles/main-styles.css" rel="stylesheet" />
@@ -13,9 +13,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <div class="header">
+            <h1 >BIURO WYCENY NIERUCHOMOŚCI</h1>
+        </div>
+        <div class="nav">
+
+            <asp:Menu ID="MenuGlowne" runat="server" DataSourceID="SiteMapDataSource" Orientation="Horizontal"></asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" ShowStartingNode="False" />
+        </div>
+        <div class="content">
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
         </div>
     </form>
 </body>
