@@ -11,17 +11,8 @@ namespace BIURO_PROJEKT
 {
 
 
-    public partial class WebForm1
+    public partial class Cennik
     {
-
-        /// <summary>
-        /// Kontrolka form1.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// Kontrolka SqlDataSource1.

@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace BIURO_PROJEKT
 {
-    public partial class Cennik : System.Web.UI.Page
+    public partial class SzablonStrony : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
         }
