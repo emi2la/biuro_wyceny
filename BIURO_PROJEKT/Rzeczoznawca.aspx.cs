@@ -18,5 +18,10 @@ namespace BIURO_PROJEKT
         {
 
         }
+
+        protected void DodajRzeczoznawce(object sender, EventArgs e)
+        {
+
+        }
     }
 }

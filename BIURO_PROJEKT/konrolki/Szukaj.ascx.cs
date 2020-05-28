@@ -7,21 +7,17 @@ using System.Web.UI.WebControls;
 
 namespace BIURO_PROJEKT
 {
-    public partial class Rzeczoznawca : System.Web.UI.Page
+    public partial class Szukaj : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void wyszukajButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void DodajRzeczoznawce(object sender, EventArgs e)
-        {
-
+            string url = String.Format("~/Zlecenie.aspx?Szukaj={0}", wyszukiwanieTextBox.Text);
+            Response.Redirect(url);
         }
     }
 }

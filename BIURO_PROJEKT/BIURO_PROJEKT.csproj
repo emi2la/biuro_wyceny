@@ -70,6 +70,7 @@
     <Content Include="Cennik.aspx" />
     <Content Include="scripts\main-scrits.js" />
     <Content Include="styles\main-styles.css" />
+    <Content Include="konrolki\Szukaj.ascx" />
     <Content Include="Zlecenie.aspx" />
     <Content Include="Rzeczoznawca.aspx" />
     <Content Include="Web.config" />
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="SzablonStrony.Master.designer.cs">
       <DependentUpon>SzablonStrony.Master</DependentUpon>
+    </Compile>
+    <Compile Include="konrolki\Szukaj.ascx.cs">
+      <DependentUpon>Szukaj.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="konrolki\Szukaj.ascx.designer.cs">
+      <DependentUpon>Szukaj.ascx</DependentUpon>
     </Compile>
     <Compile Include="Zlecenie.aspx.cs">
       <DependentUpon>Zlecenie.aspx</DependentUpon>
@@ -116,6 +124,7 @@
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

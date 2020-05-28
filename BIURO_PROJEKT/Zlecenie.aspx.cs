@@ -11,6 +11,16 @@ namespace BIURO_PROJEKT
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //string parametrWyszukiwania = Request.QueryString["Szukaj"];
+            //if (parametrWyszukiwania != null)
+            //{
+            //    AdventureWorksDataContext db = new AdventureWorksDataContext();
+            //    var produkty = from p in db.Products
+            //                   where p.Name.Contains(nazwa)
+            //                   select p;
+            //    WynikiWyszukiwaniaGridView.DataSource = produkty;
+            //    WynikiWyszukiwaniaGridView.DataBind();
+            //}
 
         }
 

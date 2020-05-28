@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT * FROM [RZECZOZNAWCA]" DeleteCommand="DELETE FROM [RZECZOZNAWCA] WHERE [ID] = @ID" InsertCommand="INSERT INTO [RZECZOZNAWCA] ([NR], [IMIE], [NAZWISKO], [MAIL]) VALUES (@NR, @IMIE, @NAZWISKO, @MAIL)" UpdateCommand="UPDATE [RZECZOZNAWCA] SET [NR] = @NR, [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL WHERE [ID] = @ID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT * FROM [RZECZOZNAWCA]" DeleteCommand="DELETE FROM [RZECZOZNAWCA] WHERE [ID] = @ID" InsertCommand="INSERT INTO [RZECZOZNAWCA] ([NR], [IMIE], [NAZWISKO], [MAIL]) VALUES (@NR, @IMIE, @NAZWISKO, @MAIL)" UpdateCommand="UPDATE [RZECZOZNAWCA] SET [NR] = @NR, [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL WHERE [ID] = @ID">
     <DeleteParameters>
         <asp:Parameter Name="ID" Type="Int32" />
     </DeleteParameters>
@@ -22,7 +22,10 @@
         <asp:Parameter Name="ID" Type="Int32" />
     </UpdateParameters>
 </asp:SqlDataSource>
-<asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="670px">
+    <br />
+    <asp:Button ID="Button1" runat="server" OnClick="DodajRzeczoznawce" Text="Dodaj" />
+    <br />
+<asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%">
     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     <Columns>
         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
@@ -48,7 +51,7 @@
         <asp:ControlParameter ControlID="GridView1" Name="ID_RZECZOZNAWCY" PropertyName="SelectedValue" />
     </SelectParameters>
 </asp:SqlDataSource>
-<asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Height="162px" Width="669px">
+<asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Height="162px" Width="100%">
     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     <Columns>
         <asp:BoundField DataField="IMIE" HeaderText="IMIE" SortExpression="IMIE" />
