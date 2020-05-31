@@ -11,52 +11,34 @@ namespace BIURO_PROJEKT
 {
 
 
-    public partial class Rzeczoznawca
+    public partial class ZleceniaRzeczoznawcy
     {
 
         /// <summary>
-        /// Kontrolka SqlDataSource1.
+        /// Kontrolka LinqDataSource1.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1;
 
         /// <summary>
-        /// Kontrolka Button1.
+        /// Kontrolka ZleceniaRzeczoznawcyGridView.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.GridView ZleceniaRzeczoznawcyGridView;
 
         /// <summary>
-        /// Kontrolka GridView1.
+        /// Kontrolka BrakZlecenLabel.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// Kontrolka SqlDataSource2.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
-
-        /// <summary>
-        /// Kontrolka DetailsView1.
-        /// </summary>
-        /// <remarks>
-        /// Pole generowane automatycznie.
-        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
+        protected global::System.Web.UI.WebControls.Label BrakZlecenLabel;
     }
 }

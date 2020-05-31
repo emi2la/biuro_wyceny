@@ -4,6 +4,7 @@
 		<siteMapNode url="Rzeczoznawca.aspx" title="Rzeczoznawcy"  description="Rzeczoznawcy"/>
 		<siteMapNode url="Zlecenie.aspx" title="Zlecenia"  description="Zlecenia"/>
 		<siteMapNode url="Cennik.aspx" title="Cennik"  description="Cennik"/>
+		<siteMapNode url="Szukaj.aspx" title="Szukaj"  description="Szukaj"/>
 	</siteMapNode>
 </siteMap>
 

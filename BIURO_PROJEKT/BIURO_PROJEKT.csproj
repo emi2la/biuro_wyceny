@@ -43,7 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,14 +73,38 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cennik.aspx" />
-    <Content Include="scripts\main-scrits.js" />
-    <Content Include="styles\main-styles.css" />
+    <Content Include="DodajRzeczoznawce.aspx" />
+    <Content Include="DodajZlecenie.aspx" />
+    <Content Include="App_Themes\Default\main-scrits.js" />
+    <Content Include="App_Themes\Default\main-styles.css" />
     <Content Include="konrolki\Szukaj.ascx" />
+    <Content Include="Szukaj.aspx" />
+    <Content Include="WynikiWyszukiwania.aspx" />
+    <Content Include="ZleceniaRzeczoznawcy.aspx" />
     <Content Include="Zlecenie.aspx" />
     <Content Include="Rzeczoznawca.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\BIURO.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BIURO.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DodajRzeczoznawce.aspx.cs">
+      <DependentUpon>DodajRzeczoznawce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DodajRzeczoznawce.aspx.designer.cs">
+      <DependentUpon>DodajRzeczoznawce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DodajZlecenie.aspx.cs">
+      <DependentUpon>DodajZlecenie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DodajZlecenie.aspx.designer.cs">
+      <DependentUpon>DodajZlecenie.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Cennik.aspx.cs">
       <DependentUpon>Cennik.aspx</DependentUpon>
@@ -98,6 +127,27 @@
     <Compile Include="konrolki\Szukaj.ascx.designer.cs">
       <DependentUpon>Szukaj.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Szukaj.aspx.cs">
+      <DependentUpon>Szukaj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Szukaj.aspx.designer.cs">
+      <DependentUpon>Szukaj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WynikiWyszukiwania.aspx.cs">
+      <DependentUpon>WynikiWyszukiwania.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WynikiWyszukiwania.aspx.designer.cs">
+      <DependentUpon>WynikiWyszukiwania.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZleceniaRzeczoznawcy.aspx.cs">
+      <DependentUpon>ZleceniaRzeczoznawcy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZleceniaRzeczoznawcy.aspx.designer.cs">
+      <DependentUpon>ZleceniaRzeczoznawcy.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Zlecenie.aspx.cs">
       <DependentUpon>Zlecenie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,6 +164,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BIURO.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>BIURO.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="App_Data\BIURO.dbml.layout">
+      <DependentUpon>BIURO.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <Content Include="SzablonStrony.Master" />
     <None Include="Web.Debug.config">
@@ -125,6 +183,10 @@
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

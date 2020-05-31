@@ -22,56 +22,66 @@
         <asp:Parameter Name="ID" Type="Int32" />
     </UpdateParameters>
 </asp:SqlDataSource>
-    <br />
-    <asp:Button ID="Button1" runat="server" OnClick="DodajRzeczoznawce" Text="Dodaj" />
-    <br />
-<asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%">
+    <asp:Button ID="Button1" runat="server" OnClick="DodajRzeczoznawce" CssClass="button" Text="Dodaj" />
+<asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="table" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%">
     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     <Columns>
-        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
         <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
         <asp:BoundField DataField="NR" HeaderText="NR" SortExpression="NR" />
         <asp:BoundField DataField="IMIE" HeaderText="IMIE" SortExpression="IMIE" />
         <asp:BoundField DataField="NAZWISKO" HeaderText="NAZWISKO" SortExpression="NAZWISKO" />
         <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
+        <asp:HyperLinkField DataNavigateUrlFields="ID" DataNavigateUrlFormatString="ZleceniaRzeczoznawcy.aspx?RzeczoznawcaId={0}" HeaderText="Zlecenia" Text="Zlecenia" />
+        <asp:CommandField HeaderText="Akcje" ShowDeleteButton="True" ShowSelectButton="True" />
     </Columns>
     <EditRowStyle BackColor="#999999" />
     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
     <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" HorizontalAlign="Left" />
     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
     <SortedAscendingCellStyle BackColor="#E9E7E2" />
     <SortedAscendingHeaderStyle BackColor="#506C8C" />
     <SortedDescendingCellStyle BackColor="#FFFDF8" />
     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
 </asp:GridView>
-<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT z.IMIE, z.NAZWISKO,z.MAIL, z.TEL, z.DATA_ZLECENIA, c.TYP, z.MIASTO, z.ADRES FROM ZLECENIE z INNER JOIN CENNIK c ON z.CENNIK_ID = c.ID WHERE (z.RZECZOZNAWCA_ID = @ID_RZECZOZNAWCY)">
+<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT [ID], [NR], [IMIE], [NAZWISKO], [MAIL] FROM [RZECZOZNAWCA] WHERE ([ID] = @ID)" DeleteCommand="DELETE FROM [RZECZOZNAWCA] WHERE [ID] = @ID" InsertCommand="INSERT INTO [RZECZOZNAWCA] ([NR], [IMIE], [NAZWISKO], [MAIL]) VALUES (@NR, @IMIE, @NAZWISKO, @MAIL)" OnSelecting="SqlDataSource2_Selecting" UpdateCommand="UPDATE [RZECZOZNAWCA] SET [NR] = @NR, [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL WHERE [ID] = @ID">
+    <DeleteParameters>
+        <asp:Parameter Name="ID" Type="Int32" />
+    </DeleteParameters>
+    <InsertParameters>
+        <asp:Parameter Name="NR" Type="Int32" />
+        <asp:Parameter Name="IMIE" Type="String" />
+        <asp:Parameter Name="NAZWISKO" Type="String" />
+        <asp:Parameter Name="MAIL" Type="String" />
+    </InsertParameters>
     <SelectParameters>
-        <asp:ControlParameter ControlID="GridView1" Name="ID_RZECZOZNAWCY" PropertyName="SelectedValue" />
+        <asp:ControlParameter ControlID="GridView1" Name="ID" PropertyName="SelectedValue" Type="Int32" />
     </SelectParameters>
+    <UpdateParameters>
+        <asp:Parameter Name="NR" Type="Int32" />
+        <asp:Parameter Name="IMIE" Type="String" />
+        <asp:Parameter Name="NAZWISKO" Type="String" />
+        <asp:Parameter Name="MAIL" Type="String" />
+        <asp:Parameter Name="ID" Type="Int32" />
+    </UpdateParameters>
 </asp:SqlDataSource>
-<asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Height="162px" Width="100%">
-    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-    <Columns>
-        <asp:BoundField DataField="IMIE" HeaderText="IMIE" SortExpression="IMIE" />
-        <asp:BoundField DataField="NAZWISKO" HeaderText="NAZWISKO" SortExpression="NAZWISKO" />
-        <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
-        <asp:BoundField DataField="TEL" HeaderText="TEL" SortExpression="TEL" />
-        <asp:BoundField DataField="DATA_ZLECENIA" HeaderText="DATA_ZLECENIA" SortExpression="DATA_ZLECENIA" />
-        <asp:BoundField DataField="TYP" HeaderText="TYP" SortExpression="TYP" />
-        <asp:BoundField DataField="MIASTO" HeaderText="MIASTO" SortExpression="MIASTO" />
-        <asp:BoundField DataField="ADRES" HeaderText="ADRES" SortExpression="ADRES" />
-    </Columns>
-    <EditRowStyle BackColor="#999999" />
-    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-    <SortedAscendingCellStyle BackColor="#E9E7E2" />
-    <SortedAscendingHeaderStyle BackColor="#506C8C" />
-    <SortedDescendingCellStyle BackColor="#FFFDF8" />
-    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-</asp:GridView>
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Height="50px" style="font-weight: 700" Width="125px">
+        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+        <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
+        <EditRowStyle BackColor="#999999" />
+        <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
+        <Fields>
+            <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+            <asp:BoundField DataField="NR" HeaderText="NR" SortExpression="NR" />
+            <asp:BoundField DataField="IMIE" HeaderText="IMIE" SortExpression="IMIE" />
+            <asp:BoundField DataField="NAZWISKO" HeaderText="NAZWISKO" SortExpression="NAZWISKO" />
+            <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+        </Fields>
+        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+    </asp:DetailsView>
     </asp:Content>

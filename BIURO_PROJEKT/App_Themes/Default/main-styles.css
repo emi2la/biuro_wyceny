@@ -1,0 +1,73 @@
+﻿body {
+    background-color: ghostwhite;
+}
+.header {
+    text-align: center;
+}
+
+.content {
+    margin-left:10%;
+    margin-right:10%;
+    min-height: 100%;
+}
+
+.nav-wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.nav {
+    width:100%;
+    margin-bottom: 10px;
+    border-bottom: solid 1px black;
+    background-color: gainsboro;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: lightgray;
+}
+
+.form-label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.form-field {
+    display: block;
+    width: 80%;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.button {
+    background-color: darkblue; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    margin: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.table {
+    margin-top: 15px;
+}

@@ -24,6 +24,15 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.TextBox wyszukiwanieTextBox;
 
         /// <summary>
+        /// Kontrolka wyszukiwanieRequiredFieldValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator wyszukiwanieRequiredFieldValidator;
+
+        /// <summary>
         /// Kontrolka wyszukajButton.
         /// </summary>
         /// <remarks>
@@ -31,5 +40,14 @@ namespace BIURO_PROJEKT
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button wyszukajButton;
+
+        /// <summary>
+        /// Kontrolka ValidationSummary1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
     }
 }

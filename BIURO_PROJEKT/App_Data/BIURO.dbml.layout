@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BIURO">
+  <DataContextMoniker Name="/BIURODataContext" />
+  <nestedChildShapes>
+    <classShape Id="f9128dc6-b5ea-4216-8e88-f21968ef2c9b" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BIURODataContext/CENNIK" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4e83afa-ba09-45be-b79e-5f3b94123840" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc63c0c4-bead-4067-b430-db234e75a1c1" absoluteBounds="3.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/BIURODataContext/ZLECENIE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f58e95dd-7b36-43e7-8320-af44b3581d9d" absoluteBounds="3.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="723cbe3a-c38f-4eac-8839-be9b806119ef" absoluteBounds="0.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/BIURODataContext/RZECZOZNAWCA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ea2d77a-5f8b-464a-8c6f-06f31026f1da" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

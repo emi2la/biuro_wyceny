@@ -7,17 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace BIURO_PROJEKT
 {
-    public partial class Cennik : System.Web.UI.Page
+    public partial class Szukaj1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
-        {
-
-        }
-
     }
 }

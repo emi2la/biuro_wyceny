@@ -21,7 +21,13 @@ namespace BIURO_PROJEKT
 
         protected void DodajRzeczoznawce(object sender, EventArgs e)
         {
+            Response.Redirect("DodajRzeczoznawce.aspx");
+        }
+
+        protected void SqlDataSource2_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
 
         }
+
     }
 }

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="API" Class="BIURODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=API;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="APIConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CENNIK" Member="CENNIK">
+    <Type Name="CENNIK">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYP" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="CENA" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZLECENIE" Member="ZLECENIE">
+    <Type Name="ZLECENIE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IMIE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAZWISKO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TEL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DATA_ZLECENIA" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MIASTO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ADRES" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RZECZOZNAWCA_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CENNIK_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RZECZOZNAWCA" Member="RZECZOZNAWCA">
+    <Type Name="RZECZOZNAWCA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IMIE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAZWISKO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
