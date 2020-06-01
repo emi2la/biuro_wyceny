@@ -19,5 +19,9 @@ namespace BIURO_PROJEKT
 
         }
 
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

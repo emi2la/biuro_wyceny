@@ -15,6 +15,15 @@ namespace BIURO_PROJEKT
     {
 
         /// <summary>
+        /// Kontrolka RzeczoznawcaLabel.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label RzeczoznawcaLabel;
+
+        /// <summary>
         /// Kontrolka LinqDataSource1.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace BIURO_PROJEKT
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1;
+
+        /// <summary>
+        /// Kontrolka SqlDataSource1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
         /// Kontrolka ZleceniaRzeczoznawcyGridView.

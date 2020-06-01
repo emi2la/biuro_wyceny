@@ -14,7 +14,7 @@ namespace BIURO_PROJEKT
 
         }
 
-        protected void wyszukajButton_Click(object sender, EventArgs e)
+        protected void WyszukajButton_Click(object sender, EventArgs e)
         {
             string url = String.Format("~/WynikiWyszukiwania.aspx?Szukaj={0}", wyszukiwanieTextBox.Text);
             Response.Redirect(url);

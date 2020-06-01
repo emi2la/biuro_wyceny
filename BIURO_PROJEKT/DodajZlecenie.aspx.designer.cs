@@ -24,13 +24,22 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Kontrolka NumerTextBox.
+        /// Kontrolka ImieTextBox.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NumerTextBox;
+        protected global::System.Web.UI.WebControls.TextBox ImieTextBox;
+
+        /// <summary>
+        /// Kontrolka RegularExpressionValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
 
         /// <summary>
         /// Kontrolka Label1.
@@ -42,13 +51,31 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Kontrolka ImieTextBox.
+        /// Kontrolka NazwiskoTextBox.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ImieTextBox;
+        protected global::System.Web.UI.WebControls.TextBox NazwiskoTextBox;
+
+        /// <summary>
+        /// Kontrolka RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
+        /// Kontrolka RegularExpressionValidator3.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
 
         /// <summary>
         /// Kontrolka Label3.
@@ -60,13 +87,22 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Kontrolka NazwiskoTextBox.
+        /// Kontrolka EmailTextBox.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NazwiskoTextBox;
+        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
+
+        /// <summary>
+        /// Kontrolka RegularExpressionValidator4.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
 
         /// <summary>
         /// Kontrolka Label4.
@@ -78,13 +114,31 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Kontrolka EmailTextBox.
+        /// Kontrolka TelefonTextBox.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
+        protected global::System.Web.UI.WebControls.TextBox TelefonTextBox;
+
+        /// <summary>
+        /// Kontrolka RequiredFieldValidator3.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+
+        /// <summary>
+        /// Kontrolka RegularExpressionValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
         /// Kontrolka Label5.
@@ -96,13 +150,13 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// Kontrolka Calendar1.
+        /// Kontrolka DatazleceniaCalendar.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.Calendar DatazleceniaCalendar;
 
         /// <summary>
         /// Kontrolka Label6.
@@ -114,13 +168,31 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// Kontrolka TextBox2.
+        /// Kontrolka MiastoTextBox.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox MiastoTextBox;
+
+        /// <summary>
+        /// Kontrolka RequiredFieldValidator.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
+
+        /// <summary>
+        /// Kontrolka RegularExpressionValidator5.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator5;
 
         /// <summary>
         /// Kontrolka Label7.
@@ -132,13 +204,13 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// Kontrolka TextBox3.
+        /// Kontrolka AdresTextBox.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox AdresTextBox;
 
         /// <summary>
         /// Kontrolka Label8.
@@ -150,13 +222,13 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
-        /// Kontrolka DropDownList1.
+        /// Kontrolka RzeczoznawcaDropDownList.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList RzeczoznawcaDropDownList;
 
         /// <summary>
         /// Kontrolka SqlDataSource1.
@@ -177,13 +249,13 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
-        /// Kontrolka DropDownList2.
+        /// Kontrolka TypZleceniaDropDownList.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList TypZleceniaDropDownList;
 
         /// <summary>
         /// Kontrolka SqlDataSource2.

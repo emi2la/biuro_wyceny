@@ -15,22 +15,18 @@ namespace BIURO_PROJEKT
             string parametrWyszukiwania = Request.QueryString["Szukaj"];
             BIURODataContext db = new BIURODataContext();
             var query = (from z in db.ZLECENIE
-                                         join r in db.RZECZOZNAWCA on z.RZECZOZNAWCA_ID equals r.ID
-                                         where z.NAZWISKO.Contains(parametrWyszukiwania)
-                                         || z.MIASTO.Contains(parametrWyszukiwania)
-                                         || z.ADRES.Contains(parametrWyszukiwania)
-                         select new { z.ID,  Rzeczoznawca = r.IMIE+" " +r.NAZWISKO, z.MIASTO, z.MAIL, klient = z.IMIE + " " + z.NAZWISKO}).ToList();
-            if (query.Any())
-            {
-                WynikiWyszukiwaniaGridView.DataSource = query;
-                WynikiWyszukiwaniaGridView.DataBind();
+                         join r in db.RZECZOZNAWCA on z.RZECZOZNAWCA_ID equals r.ID
+                         where z.NAZWISKO.Contains(parametrWyszukiwania)
+                         || r.NAZWISKO.Contains(parametrWyszukiwania)
+                         || z.MIASTO.Contains(parametrWyszukiwania)
+                         || z.ADRES.Contains(parametrWyszukiwania)
+                         select z);
 
-            }
-            else
+            if (!query.Any())
             {
                 BrakWynikowLabel.Text = $"Nie znaleziono żadnych zleceń dla: {parametrWyszukiwania}";
-            }
 
+            }
 
         }
 

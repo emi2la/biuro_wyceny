@@ -5,6 +5,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="page-header">
+        WYSZUKIWANIE
+    </div>
     <uc1:Szukaj runat="server" ID="Szukaj" />
 </asp:Content>
 
