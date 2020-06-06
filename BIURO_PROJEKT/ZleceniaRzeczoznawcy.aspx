@@ -8,7 +8,7 @@
     </div>
         <asp:LinqDataSource ID="LinqDataSource1" runat="server">
     </asp:LinqDataSource>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" DeleteCommand="DELETE FROM [ZLECENIE] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ZLECENIE] ([IMIE], [NAZWISKO], [MAIL], [TEL], [DATA_ZLECENIA], [MIASTO], [ADRES], [RZECZOZNAWCA_ID], [CENNIK_ID]) VALUES (@IMIE, @NAZWISKO, @MAIL, @TEL, @DATA_ZLECENIA, @MIASTO, @ADRES, @RZECZOZNAWCA_ID, @CENNIK_ID)" SelectCommand="SELECT ZLECENIE.ID, ZLECENIE.IMIE, ZLECENIE.NAZWISKO, ZLECENIE.MAIL, ZLECENIE.TEL, ZLECENIE.DATA_ZLECENIA, ZLECENIE.MIASTO, ZLECENIE.ADRES, RZECZOZNAWCA.NAZWISKO + ' ' + RZECZOZNAWCA.IMIE AS RZEZCZOZNAWCA, CENNIK.TYP FROM ZLECENIE INNER JOIN CENNIK ON ZLECENIE.CENNIK_ID = CENNIK.ID INNER JOIN RZECZOZNAWCA ON ZLECENIE.RZECZOZNAWCA_ID = RZECZOZNAWCA.ID WHERE (RZECZOZNAWCA.ID = @ID)" UpdateCommand="UPDATE [ZLECENIE] SET [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL, [TEL] = @TEL, [DATA_ZLECENIA] = @DATA_ZLECENIA, [MIASTO] = @MIASTO, [ADRES] = @ADRES, [RZECZOZNAWCA_ID] = @RZECZOZNAWCA_ID, [CENNIK_ID] = @CENNIK_ID WHERE [ID] = @ID">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" DeleteCommand="DELETE FROM [ZLECENIE] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ZLECENIE] ([IMIE], [NAZWISKO], [MAIL], [TEL], [DATA_ZLECENIA], [MIASTO], [ADRES], [RZECZOZNAWCA_ID], [CENNIK_ID]) VALUES (@IMIE, @NAZWISKO, @MAIL, @TEL, @DATA_ZLECENIA, @MIASTO, @ADRES, @RZECZOZNAWCA_ID, @CENNIK_ID)" SelectCommand="SELECT ZLECENIE.ID, ZLECENIE.IMIE, ZLECENIE.NAZWISKO, ZLECENIE.MAIL, ZLECENIE.TEL, FORMAT(ZLECENIE.DATA_ZLECENIA, 'dd-MM-yyyy') as 'DATA ZLECENIA', ZLECENIE.MIASTO, ZLECENIE.ADRES, RZECZOZNAWCA.NAZWISKO + ' ' + RZECZOZNAWCA.IMIE AS RZEZCZOZNAWCA, CENNIK.TYP FROM ZLECENIE INNER JOIN CENNIK ON ZLECENIE.CENNIK_ID = CENNIK.ID INNER JOIN RZECZOZNAWCA ON ZLECENIE.RZECZOZNAWCA_ID = RZECZOZNAWCA.ID WHERE (RZECZOZNAWCA.ID = @ID)" UpdateCommand="UPDATE [ZLECENIE] SET [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL, [TEL] = @TEL, [DATA_ZLECENIA] = @DATA_ZLECENIA, [MIASTO] = @MIASTO, [ADRES] = @ADRES, [RZECZOZNAWCA_ID] = @RZECZOZNAWCA_ID, [CENNIK_ID] = @CENNIK_ID WHERE [ID] = @ID">
                 <DeleteParameters>
                     <asp:Parameter Name="ID" Type="Int32" />
                 </DeleteParameters>
@@ -24,7 +24,7 @@
                     <asp:Parameter Name="CENNIK_ID" Type="Int32" />
                 </InsertParameters>
                 <SelectParameters>
-                    <asp:QueryStringParameter Name="ID" QueryStringField="RzeczoznawcaId" Type="Int32" />
+                    <asp:Parameter Name="ID" />
                 </SelectParameters>
                 <UpdateParameters>
                     <asp:Parameter Name="IMIE" Type="String" />
@@ -45,12 +45,13 @@
             <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
             <asp:BoundField DataField="IMIE" HeaderText="IMIE" SortExpression="IMIE" />
             <asp:BoundField DataField="NAZWISKO" HeaderText="NAZWISKO" SortExpression="NAZWISKO" />
-            <asp:BoundField DataField="MAIL" HeaderText="EMAIL" SortExpression="MAIL" />
-            <asp:BoundField DataField="TEL" HeaderText="TELEFON" SortExpression="TEL" />
-            <asp:BoundField DataField="DATA_ZLECENIA" HeaderText="DATA ZLECENIA" SortExpression="DATA_ZLECENIA" />
-            <asp:BoundField DataField="TYP" HeaderText="TYP" SortExpression="TYP" />
+            <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
+            <asp:BoundField DataField="TEL" HeaderText="TEL" SortExpression="TEL" />
+            <asp:BoundField DataField="DATA ZLECENIA" HeaderText="DATA ZLECENIA" SortExpression="DATA ZLECENIA" ReadOnly="True" />
             <asp:BoundField DataField="MIASTO" HeaderText="MIASTO" SortExpression="MIASTO" />
             <asp:BoundField DataField="ADRES" HeaderText="ADRES" SortExpression="ADRES" />
+            <asp:BoundField DataField="RZEZCZOZNAWCA" HeaderText="RZEZCZOZNAWCA" SortExpression="RZEZCZOZNAWCA" ReadOnly="True" />
+            <asp:BoundField DataField="TYP" HeaderText="TYP" SortExpression="TYP" />
             <asp:CommandField ShowDeleteButton="True" />
         </Columns>
         <EditRowStyle BackColor="#999999" />

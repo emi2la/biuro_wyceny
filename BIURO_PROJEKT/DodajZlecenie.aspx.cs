@@ -21,11 +21,11 @@ namespace BIURO_PROJEKT
             String constr = ConfigurationManager.ConnectionStrings["APIConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(constr))
             {
-                String sql = $"Insert into ZLECENIE VALUES('{ImieTextBox.Text}','{NazwiskoTextBox.Text}','{EmailTextBox.Text}','{TelefonTextBox.Text}','{DatazleceniaCalendar.SelectedDate.ToShortDateString()}','{MiastoTextBox.Text}','{AdresTextBox.Text}','{RzeczoznawcaDropDownList.SelectedItem.Value}','{TypZleceniaDropDownList.SelectedItem.Value}') select SCOPE_IDENTITY();";
+                String sql = $"Insert into ZLECENIE VALUES('{ImieTextBox.Text}','{NazwiskoTextBox.Text}','{EmailTextBox.Text}','{TelefonTextBox.Text}','{DatazleceniaCalendar.SelectedDate}','{MiastoTextBox.Text}','{AdresTextBox.Text}','{RzeczoznawcaDropDownList.SelectedItem.Value}','{TypZleceniaDropDownList.SelectedItem.Value}') select SCOPE_IDENTITY();";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
-                Response.Redirect("/Rzeczoznawca.aspx");
+                Response.Redirect("/Zlecenie.aspx");
             }
         }
 

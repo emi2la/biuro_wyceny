@@ -23,5 +23,9 @@ namespace BIURO_PROJEKT
             Response.Redirect("DodajZlecenie.aspx");
         }
 
+        protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+        {
+
+        }
     }
 }
