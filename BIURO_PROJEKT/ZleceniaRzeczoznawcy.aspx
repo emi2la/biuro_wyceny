@@ -8,7 +8,7 @@
     </div>
         <asp:LinqDataSource ID="LinqDataSource1" runat="server">
     </asp:LinqDataSource>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" DeleteCommand="DELETE FROM [ZLECENIE] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ZLECENIE] ([IMIE], [NAZWISKO], [MAIL], [TEL], [DATA_ZLECENIA], [MIASTO], [ADRES], [RZECZOZNAWCA_ID], [CENNIK_ID]) VALUES (@IMIE, @NAZWISKO, @MAIL, @TEL, @DATA_ZLECENIA, @MIASTO, @ADRES, @RZECZOZNAWCA_ID, @CENNIK_ID)" SelectCommand="SELECT ZLECENIE.ID, ZLECENIE.IMIE, ZLECENIE.NAZWISKO, ZLECENIE.MAIL, ZLECENIE.TEL, FORMAT(ZLECENIE.DATA_ZLECENIA, 'dd-MM-yyyy') as 'DATA ZLECENIA', ZLECENIE.MIASTO, ZLECENIE.ADRES, RZECZOZNAWCA.NAZWISKO + ' ' + RZECZOZNAWCA.IMIE AS RZEZCZOZNAWCA, CENNIK.TYP FROM ZLECENIE INNER JOIN CENNIK ON ZLECENIE.CENNIK_ID = CENNIK.ID INNER JOIN RZECZOZNAWCA ON ZLECENIE.RZECZOZNAWCA_ID = RZECZOZNAWCA.ID WHERE (RZECZOZNAWCA.ID = @ID)" UpdateCommand="UPDATE [ZLECENIE] SET [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL, [TEL] = @TEL, [DATA_ZLECENIA] = @DATA_ZLECENIA, [MIASTO] = @MIASTO, [ADRES] = @ADRES, [RZECZOZNAWCA_ID] = @RZECZOZNAWCA_ID, [CENNIK_ID] = @CENNIK_ID WHERE [ID] = @ID">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" DeleteCommand="DELETE FROM [ZLECENIE] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ZLECENIE] ([IMIE], [NAZWISKO], [MAIL], [TEL], [DATA_ZLECENIA], [MIASTO], [ADRES], [RZECZOZNAWCA_ID], [CENNIK_ID]) VALUES (@IMIE, @NAZWISKO, @MAIL, @TEL, @DATA_ZLECENIA, @MIASTO, @ADRES, @RZECZOZNAWCA_ID, @CENNIK_ID)" SelectCommand="SELECT ZLECENIE.ID, ZLECENIE.IMIE, ZLECENIE.NAZWISKO, ZLECENIE.MAIL, ZLECENIE.TEL, FORMAT(ZLECENIE.DATA_ZLECENIA, 'dd-MM-yyyy') as 'DATA ZLECENIA', ZLECENIE.MIASTO, ZLECENIE.ADRES, RZECZOZNAWCA.NAZWISKO + ' ' + RZECZOZNAWCA.IMIE AS RZEZCZOZNAWCA, CENNIK.TYP FROM ZLECENIE INNER JOIN CENNIK ON ZLECENIE.CENNIK_ID = CENNIK.ID INNER JOIN RZECZOZNAWCA ON ZLECENIE.RZECZOZNAWCA_ID = RZECZOZNAWCA.ID WHERE (RZECZOZNAWCA.ID = @RzeczoznawcaId)" UpdateCommand="UPDATE [ZLECENIE] SET [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL, [TEL] = @TEL, [DATA_ZLECENIA] = @DATA_ZLECENIA, [MIASTO] = @MIASTO, [ADRES] = @ADRES, [RZECZOZNAWCA_ID] = @RZECZOZNAWCA_ID, [CENNIK_ID] = @CENNIK_ID WHERE [ID] = @ID">
                 <DeleteParameters>
                     <asp:Parameter Name="ID" Type="Int32" />
                 </DeleteParameters>
@@ -24,7 +24,7 @@
                     <asp:Parameter Name="CENNIK_ID" Type="Int32" />
                 </InsertParameters>
                 <SelectParameters>
-                    <asp:Parameter Name="ID" />
+                    <asp:QueryStringParameter Name="RzeczoznawcaId" QueryStringField="RzeczoznawcaId" />
                 </SelectParameters>
                 <UpdateParameters>
                     <asp:Parameter Name="IMIE" Type="String" />

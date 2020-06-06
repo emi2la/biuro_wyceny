@@ -33,5 +33,7 @@ namespace BIURO_PROJEKT
             BIURODataContext db = new BIURODataContext();
             return (from r in db.RZECZOZNAWCA where r.ID.Equals(id) select r.NAZWISKO + " " + r.IMIE).First().ToUpper();
         }
+
+
     }
 }

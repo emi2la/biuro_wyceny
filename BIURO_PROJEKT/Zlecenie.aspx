@@ -116,7 +116,7 @@
             <asp:BoundField DataField="NAZWISKO" HeaderText="NAZWISKO" SortExpression="NAZWISKO" />
             <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
             <asp:BoundField DataField="TEL" HeaderText="TEL" SortExpression="TEL" />
-            <asp:BoundField DataField="DATA ZLECENIA" HeaderText="DATA ZLECENIA" SortExpression="DATA ZLECENIA" ReadOnly="True" />
+            <asp:BoundField DataField="DATA ZLECENIA" HeaderText="DATA ZLECENIA" SortExpression="DATA ZLECENIA" />
             <asp:BoundField DataField="MIASTO" HeaderText="MIASTO" SortExpression="MIASTO" />
             <asp:BoundField DataField="ADRES" HeaderText="ADRES" SortExpression="ADRES" />
             <asp:TemplateField HeaderText="RZECZOZNAWCA" SortExpression="RZECZOZNAWCA_ID">
@@ -135,7 +135,7 @@
                     </asp:Repeater>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="CENNIK" SortExpression="CENNIK_ID">
+            <asp:TemplateField HeaderText="TYP" SortExpression="CENNIK_ID">
                 <EditItemTemplate>
                     <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource5" DataTextField="TYP" DataValueField="ID" SelectedValue='<%# Bind("CENNIK_ID") %>'>
                     </asp:DropDownList>
