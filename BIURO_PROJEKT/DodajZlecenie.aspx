@@ -10,6 +10,7 @@
         <asp:TextBox ID="ImieTextBox" runat="server" CssClass="form-field"></asp:TextBox>
     </div>
     <div class="form-group">
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ImieTextBox" Display="Dynamic" ErrorMessage="Pole jest wymagane" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" Display="Dynamic" ErrorMessage="Imię powinno składać sie z samych liter" ForeColor="Red" ValidationExpression="^[A-Za-z]+$" ControlToValidate="ImieTextBox"></asp:RegularExpressionValidator>
         <asp:Label ID="Label1" runat="server" Text="Nazwisko klienta:" CssClass="form-label"></asp:Label>
         <asp:TextBox ID="NazwiskoTextBox" runat="server" Width="80%"></asp:TextBox>

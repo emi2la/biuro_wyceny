@@ -16,10 +16,10 @@ namespace BIURO_PROJEKT
             BIURODataContext db = new BIURODataContext();
             var query = (from z in db.ZLECENIE
                          join r in db.RZECZOZNAWCA on z.RZECZOZNAWCA_ID equals r.ID
-                         where z.NAZWISKO.Contains(parametrWyszukiwania)
-                         || r.NAZWISKO.Contains(parametrWyszukiwania)
-                         || z.MIASTO.Contains(parametrWyszukiwania)
-                         || z.ADRES.Contains(parametrWyszukiwania)
+                         where z.NAZWISKO.StartsWith(parametrWyszukiwania)
+                         || r.NAZWISKO.StartsWith(parametrWyszukiwania)
+                         || z.MIASTO.StartsWith(parametrWyszukiwania)
+                         || z.ADRES.StartsWith(parametrWyszukiwania)
                          select z);
 
             if (!query.Any())
@@ -30,5 +30,9 @@ namespace BIURO_PROJEKT
 
         }
 
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }

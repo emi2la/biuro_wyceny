@@ -33,6 +33,15 @@ namespace BIURO_PROJEKT
         protected global::System.Web.UI.WebControls.TextBox ImieTextBox;
 
         /// <summary>
+        /// Kontrolka RequiredFieldValidator4.
+        /// </summary>
+        /// <remarks>
+        /// Pole generowane automatycznie.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+
+        /// <summary>
         /// Kontrolka RegularExpressionValidator2.
         /// </summary>
         /// <remarks>

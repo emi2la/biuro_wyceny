@@ -29,7 +29,7 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT ZLECENIE.ID, ZLECENIE.NAZWISKO + ' ' + ZLECENIE.IMIE AS Klient, ZLECENIE.MIASTO, ZLECENIE.ADRES, ZLECENIE.TEL, ZLECENIE.MAIL, RZECZOZNAWCA.NAZWISKO + ' ' + RZECZOZNAWCA.IMIE AS RZECZOZNAWCA,CENNIK.TYP AS TYP FROM CENNIK INNER JOIN RZECZOZNAWCA ON CENNIK.ID = RZECZOZNAWCA.ID INNER JOIN ZLECENIE ON CENNIK.ID = ZLECENIE.ID WHERE (ZLECENIE.NAZWISKO LIKE @Szukaj + '%') OR (RZECZOZNAWCA.NAZWISKO LIKE @Szukaj + '%') OR (ZLECENIE.MIASTO LIKE @Szukaj + '%') OR (ZLECENIE.ADRES LIKE @Szukaj + '%')">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT ZLECENIE.ID, ZLECENIE.NAZWISKO + ' ' + ZLECENIE.IMIE AS Klient, ZLECENIE.MIASTO, ZLECENIE.ADRES, ZLECENIE.TEL, ZLECENIE.MAIL, RZECZOZNAWCA.NAZWISKO + ' ' + RZECZOZNAWCA.IMIE AS RZECZOZNAWCA,CENNIK.TYP AS TYP FROM ZLECENIE INNER JOIN RZECZOZNAWCA ON ZLECENIE.RZECZOZNAWCA_ID = RZECZOZNAWCA.ID INNER JOIN CENNIK ON ZLECENIE.CENNIK_ID = CENNIK.ID WHERE (ZLECENIE.NAZWISKO LIKE @Szukaj + '%') OR (RZECZOZNAWCA.NAZWISKO LIKE @Szukaj + '%') OR (ZLECENIE.MIASTO LIKE @Szukaj + '%') OR (ZLECENIE.ADRES LIKE @Szukaj + '%')">
         <SelectParameters>
             <asp:QueryStringParameter DefaultValue="" Name="Szukaj" QueryStringField="Szukaj" />
         </SelectParameters>
