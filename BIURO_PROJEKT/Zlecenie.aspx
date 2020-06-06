@@ -18,7 +18,7 @@
     <div class="page-header">
         LISTA ZLECEŃ
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT z.ID, z.IMIE + ' ' + z.NAZWISKO AS KLIENT, z.TEL, z.MAIL, FORMAT (z.DATA_ZLECENIA, 'dd-MM-yyyy') as 'DATA ZLECENIA', c.TYP, z.MIASTO, z.ADRES, r.IMIE + ' ' + r.NAZWISKO AS RZECZOZNAWCA FROM ZLECENIE AS z INNER JOIN CENNIK AS c ON c.ID = z.CENNIK_ID INNER JOIN RZECZOZNAWCA AS r ON r.ID = z.RZECZOZNAWCA_ID" DeleteCommand="DELETE FROM [ZLECENIE] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ZLECENIE] ([IMIE], [NAZWISKO], [MAIL], [TEL], [DATA_ZLECENIA], [MIASTO], [ADRES], [RZECZOZNAWCA_ID], [CENNIK_ID]) VALUES (@IMIE, @NAZWISKO, @MAIL, @TEL, @DATA_ZLECENIA, @MIASTO, @ADRES, @RZECZOZNAWCA_ID, @CENNIK_ID)" UpdateCommand="UPDATE [ZLECENIE] SET [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL, [TEL] = @TEL, [DATA_ZLECENIA] = @DATA_ZLECENIA, [MIASTO] = @MIASTO, [ADRES] = @ADRES, [RZECZOZNAWCA_ID] = @RZECZOZNAWCA_ID, [CENNIK_ID] = @CENNIK_ID WHERE [ID] = @ID">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT z.ID, z.IMIE + ' ' + z.NAZWISKO AS KLIENT, z.TEL, z.MAIL, FORMAT (z.DATA_ZLECENIA, 'dd-MM-yyyy') as 'DATA_ZLECENIA', c.TYP, z.MIASTO, z.ADRES, r.IMIE + ' ' + r.NAZWISKO AS RZECZOZNAWCA FROM ZLECENIE AS z INNER JOIN CENNIK AS c ON c.ID = z.CENNIK_ID INNER JOIN RZECZOZNAWCA AS r ON r.ID = z.RZECZOZNAWCA_ID" DeleteCommand="DELETE FROM [ZLECENIE] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ZLECENIE] ([IMIE], [NAZWISKO], [MAIL], [TEL], [DATA_ZLECENIA], [MIASTO], [ADRES], [RZECZOZNAWCA_ID], [CENNIK_ID]) VALUES (@IMIE, @NAZWISKO, @MAIL, @TEL, @DATA_ZLECENIA, @MIASTO, @ADRES, @RZECZOZNAWCA_ID, @CENNIK_ID)" UpdateCommand="UPDATE [ZLECENIE] SET [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL, [TEL] = @TEL, [DATA_ZLECENIA] = @DATA_ZLECENIA, [MIASTO] = @MIASTO, [ADRES] = @ADRES, [RZECZOZNAWCA_ID] = @RZECZOZNAWCA_ID, [CENNIK_ID] = @CENNIK_ID WHERE [ID] = @ID">
         <DeleteParameters>
             <asp:Parameter Name="ID" Type="Int32" />
         </DeleteParameters>
@@ -54,7 +54,7 @@
             <asp:BoundField DataField="KLIENT" HeaderText="KLIENT" SortExpression="KLIENT" ReadOnly="True" />
             <asp:BoundField DataField="TEL" HeaderText="TEL" SortExpression="TEL" />
             <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
-            <asp:BoundField DataField="DATA ZLECENIA" HeaderText="DATA ZLECENIA" SortExpression="DATA ZLECENIA" ReadOnly="True" />
+            <asp:BoundField DataField="DATA_ZLECENIA" HeaderText="DATA_ZLECENIA" SortExpression="DATA_ZLECENIA" ReadOnly="True" />
             <asp:BoundField DataField="TYP" HeaderText="TYP" SortExpression="TYP" />
             <asp:BoundField DataField="MIASTO" HeaderText="MIASTO" SortExpression="MIASTO" />
             <asp:BoundField DataField="ADRES" HeaderText="ADRES" SortExpression="ADRES" />
@@ -72,7 +72,7 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT ID, IMIE, NAZWISKO, MAIL, TEL, format(DATA_ZLECENIA, 'dd-MM-yyyy') AS 'DATA ZLECENIA', MIASTO, ADRES, RZECZOZNAWCA_ID, CENNIK_ID FROM ZLECENIE WHERE (ID = @ID)" DeleteCommand="DELETE FROM [ZLECENIE] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ZLECENIE] ([IMIE], [NAZWISKO], [MAIL], [TEL], [DATA_ZLECENIA], [MIASTO], [ADRES], [RZECZOZNAWCA_ID], [CENNIK_ID]) VALUES (@IMIE, @NAZWISKO, @MAIL, @TEL, @DATA_ZLECENIA, @MIASTO, @ADRES, @RZECZOZNAWCA_ID, @CENNIK_ID)" UpdateCommand="UPDATE [ZLECENIE] SET [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL, [TEL] = @TEL, [DATA_ZLECENIA] = @DATA_ZLECENIA, [MIASTO] = @MIASTO, [ADRES] = @ADRES, [RZECZOZNAWCA_ID] = @RZECZOZNAWCA_ID, [CENNIK_ID] = @CENNIK_ID WHERE [ID] = @ID">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:APIConnectionString %>" SelectCommand="SELECT ID, IMIE, NAZWISKO, MAIL, TEL, format(DATA_ZLECENIA, 'dd-MM-yyyy') AS 'DATA_ZLECENIA', MIASTO, ADRES, RZECZOZNAWCA_ID, CENNIK_ID FROM ZLECENIE WHERE (ID = @ID)" DeleteCommand="DELETE FROM [ZLECENIE] WHERE [ID] = @ID" InsertCommand="INSERT INTO [ZLECENIE] ([IMIE], [NAZWISKO], [MAIL], [TEL], [DATA_ZLECENIA], [MIASTO], [ADRES], [RZECZOZNAWCA_ID], [CENNIK_ID]) VALUES (@IMIE, @NAZWISKO, @MAIL, @TEL, @DATA_ZLECENIA, @MIASTO, @ADRES, @RZECZOZNAWCA_ID, @CENNIK_ID)" UpdateCommand="UPDATE [ZLECENIE] SET [IMIE] = @IMIE, [NAZWISKO] = @NAZWISKO, [MAIL] = @MAIL, [TEL] = @TEL, [DATA_ZLECENIA] = @DATA_ZLECENIA, [MIASTO] = @MIASTO, [ADRES] = @ADRES, [RZECZOZNAWCA_ID] = @RZECZOZNAWCA_ID, [CENNIK_ID] = @CENNIK_ID WHERE [ID] = @ID">
         <DeleteParameters>
             <asp:Parameter Name="ID" Type="Int32" />
         </DeleteParameters>
@@ -116,7 +116,7 @@
             <asp:BoundField DataField="NAZWISKO" HeaderText="NAZWISKO" SortExpression="NAZWISKO" />
             <asp:BoundField DataField="MAIL" HeaderText="MAIL" SortExpression="MAIL" />
             <asp:BoundField DataField="TEL" HeaderText="TEL" SortExpression="TEL" />
-            <asp:BoundField DataField="DATA ZLECENIA" HeaderText="DATA ZLECENIA" SortExpression="DATA ZLECENIA" />
+            <asp:BoundField DataField="DATA_ZLECENIA" HeaderText="DATA_ZLECENIA" SortExpression="DATA_ZLECENIA" />
             <asp:BoundField DataField="MIASTO" HeaderText="MIASTO" SortExpression="MIASTO" />
             <asp:BoundField DataField="ADRES" HeaderText="ADRES" SortExpression="ADRES" />
             <asp:TemplateField HeaderText="RZECZOZNAWCA" SortExpression="RZECZOZNAWCA_ID">
